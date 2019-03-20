@@ -14,6 +14,8 @@ const reducer = (state = initialState, action) => {
       return { ...state, isFetching: false, payload: action.payload };
     case CONST.BOOKS_ERROR:
       return { ...state, isFetching: false, payload: action.error };
+    case CONST.BOOKS_CLEAR:
+      return { ...state, payload: null };
     default:
       return state;
   }
